@@ -3,27 +3,50 @@ body {font-family: "Roboto", sans-serif;
     background-color: #fff ;
 }
 
-ul{list-style: none;}
+ul, ol {list-style: none;
+padding-left: 0;
+margin: 0;}
 
 a{text-decoration: none;}
 
 button{ cursor: pointer;}
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
 
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+address {
+    font-style: normal;
+}
 
 
 .header-meny-link:hover {
     color: #404BBF;
 }
 
-.visually-hidden {
-  margin: -1px;
-  border: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
+.visually-hidden{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;}
 
 .header-logo{
 letter-spacing: 0.03em;
@@ -35,11 +58,21 @@ font-weight: 700;
 line-height: 1.7;}
 
 /**=================================Header===========*/
-
-.header {
+.container{
+    width: 1158px;
+    padding: 0 15px; 
+    margin: 0 auto;
 }
 
-.header-navigation {
+.header-container {display: flex;
+    align-items: center;
+}
+
+.header {border-bottom: 1px solid #e7e9fc;
+}
+
+.header-navigation {display: flex;
+    align-items: center;
 }
 
 .header-logo {
@@ -50,6 +83,7 @@ line-height: 1.17;
 letter-spacing: 0.03em;
 text-transform: uppercase;
 color: #4d5ae5;
+margin-right: 76px;
 }
 
 .header-logo:hover,
@@ -60,11 +94,13 @@ color: #4d5ae5;
 }
 
 .header-meny-list {
+    display: flex;
 font-weight: 500;
 font-size: 16px;
 line-height: 1.5;
 letter-spacing: 0.02em;
 color: #2e2f42;
+gap: 40px;
 }
 .header-meny-list:hover,
 .header-meny-list:focus {color: #404BBF}
@@ -79,17 +115,25 @@ color: #2e2f42;
 }
 
 .header-meny-link { color: #2e2f42;
+    padding: 24px 0;
+    display: block;
+
 }
 .header-meny-link:focus { color: #404bbf;}
 
 .address {font-style: normal;
+    margin-left: auto;
 }
 
-.address-list {font-weight: 400;
+.address-list {
+    display: flex;
+    font-weight: 400;
 font-size: 16px;
 line-height: 1.5;
 letter-spacing: 0.02em;
 color: #434455;
+gap: 40px;
+
 }
 
 .address-list:hover, .address-list:focus {color: #404BBF;}
@@ -97,14 +141,17 @@ color: #434455;
 .address-mail:hover { color: #404BBF;
 }
 
-.address-tel:hover {
-}
+
 
 /**========================================Hero===========*/
 
 .hero {
-    background: #2e2f42;
+    
 }
+
+.hero-wrap{
+    padding: 188px 472px 292px 472px;
+background: #2e2f42;}
 
 .hero-title {
     font-weight: 700;
@@ -113,6 +160,9 @@ line-height: 1.07;
 letter-spacing: 0.02em;
 text-align: center;
 color: #fff;
+padding-bottom: 48px;
+margin: 0 auto;
+width: 496px;
 }
 
 .hero-btn {
@@ -121,7 +171,9 @@ font-size: 16px;
 line-height: 1.5;
 letter-spacing: 0.04em;
 color: #ffffff;
-background-color: #4D5AE5;}
+background-color: #4D5AE5;
+display: block;
+margin: 0 auto;}
 
 .hero-btn:hover,
 .hero-btn:focus {
